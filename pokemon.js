@@ -23,7 +23,7 @@ class Pokemon {
   const Bulbasaur = new Pokemon('Bulbasaur', 35, 25, 120, 60);
   
   while (salameche.hp > 0 && Bulbasaur.hp > 0) {
-    // salameche attaque Bulbasaur
+    
     if (salameche.isLucky()) {
       salameche.attackPokemon(Bulbasaur);
     }
@@ -35,7 +35,7 @@ class Pokemon {
       break;
     }
     
-    // Bulbasaur attaque salameche
+    
     if (Bulbasaur.isLucky()) {
       Bulbasaur.attackPokemon(salameche);
     }

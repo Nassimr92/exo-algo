@@ -1,15 +1,15 @@
-// Fonction pour générer un nombre aléatoire entre min et max
+
 function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-// Tableau de prénoms pour les survivants
-const prenoms = ["Alice", "Bob", "Charlie", "David", "Eve"];
 
-// Fonction pour générer un survivant avec une caractéristique aléatoire
+const prenoms = ["riyad", "eva", "stephane", "David", "louis"];
+
+
 function genererSurvivant() {
   const prenom = prenoms[Math.floor(Math.random() * prenoms.length)];
-  const caracteristique = ["Nerd", "Sportif", "Blonde"][Math.floor(Math.random() * 3)];
+  const caracteristique = ["Geek", "Sportif", "plus de cheveaux"][Math.floor(Math.random() * 3)];
   const probabiliteMourir = getRandomNumber(0, 1);
   const probabiliteDegats = getRandomNumber(0, 1);
   const probabiliteMourirDegats = getRandomNumber(0, 1);
@@ -24,16 +24,15 @@ function genererSurvivant() {
   };
 }
 
-// Création de Jason
 const jason = {
   nom: "Jason",
   pointsDeVie: 100
 };
 
-// Création de 5 survivants
+
 const survivants = Array.from({ length: 5 }, genererSurvivant);
 
-// Fonction pour résoudre l'issue d'un combat entre le tueur et un survivant
+
 function resoudreCombat(tueur, survivant) {
   const action = getRandomNumber(0, 1);
 
@@ -50,7 +49,7 @@ function resoudreCombat(tueur, survivant) {
   }
 }
 
-// Tant que le tueur n'est pas mort et que Jason n'est pas mort
+
 while (jason.pointsDeVie > 0 && survivants.some(survivant => survivant.pointsDeVie > 0)) {
   for (const survivant of survivants) {
     if (jason.pointsDeVie <= 0 || survivant.pointsDeVie <= 0) continue;
@@ -58,7 +57,7 @@ while (jason.pointsDeVie > 0 && survivants.some(survivant => survivant.pointsDeV
   }
 }
 
-// Affichage des morts
+
 console.log("Morts :");
 for (const survivant of survivants) {
   if (survivant.pointsDeVie <= 0) {
