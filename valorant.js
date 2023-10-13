@@ -12,7 +12,6 @@ function choisirJoueurAleatoire(equipe) {
   return joueur;
 }
 
-
 function simulerManche() {
   const attaquant = choisirJoueurAleatoire(equipeAttaquants);
   const defenseur = choisirJoueurAleatoire(equipeDefenseurs);
@@ -28,21 +27,22 @@ function simulerManche() {
     const duelGagne = Math.random() < 0.7;
 
     if (duelGagne) {
-      console.log(`L'attaquant ${attaquant} remporte le duel.`);
+      console.log(`L'attaquant ${attaquant} remporte le duel grace a sa vandal ou il met un one tap.`);
       scoreAttaquants++;
     } else {
-      console.log(`Le défenseur ${defenseur} tue l'attaquant ${attaquant}.`);
+      console.log(`Le défenseur ${defenseur} a detruit grace a sont operateur l'attanquant ${attaquant}.`);
       scoreDefenseurs++;
     }
+    
   } else {
-    console.log(`Le spike n'est pas amorcé.`);
+    console.log(`Le spike n'est pas amorcé les defenseur ont reusie a defendre pour l'instant sont site.`);
     const duelGagne = Math.random() < 0.5;
 
     if (duelGagne) {
-      console.log(`L'attaquant ${attaquant} remporte le duel.`);
+      console.log(`L'attaquant ${attaquant} detruit les adversaires.`);
       scoreAttaquants++;
     } else {
-      console.log(`Le défenseur ${defenseur} tue l'attaquant ${attaquant}.`);
+      console.log(`Le défenseur ${defenseur} gagne l'eco graçe a sont cherif ${attaquant}.`);
       scoreDefenseurs++;
     }
   }
@@ -57,7 +57,7 @@ while (scoreAttaquants < 13 && scoreDefenseurs < 13) {
 
 
 if (scoreAttaquants === 13) {
-  console.log(`Victoire des attaquant !`);
+  console.log(`victoire des Attanquants ils ont detruite les attanquants, dans le chat ils ont tout marquée ez car ils sont tous toxic car c est la commu valorant !`);
 } else {
-  console.log(`victoire des defenseur !`);
+  console.log(`victoire des Defenseur ils ont detruite les attanquants, dans le chat ils ont tout marquée ez car ils sont tous toxic car c est la commu valorant !`);
 }
